@@ -8,7 +8,11 @@
 public class disc
 {
     private int size;
-    public disk(int discSize){
+    public disc(int discSize){
         size = discSize;
+    }
+    
+    public disc(){
+    this(0);
     }
 }
