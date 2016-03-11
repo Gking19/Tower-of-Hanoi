@@ -11,8 +11,8 @@ public class disc
     public disc(int discSize){
         size = discSize;
     }
-    
+
     public disc(){
-    this(0);
+        this(0);
     }
 }
