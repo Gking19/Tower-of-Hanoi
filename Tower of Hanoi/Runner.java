@@ -12,4 +12,6 @@ public class Runner
             Disc disc = new Disc(i);
         }
     }
+    
+    
 }

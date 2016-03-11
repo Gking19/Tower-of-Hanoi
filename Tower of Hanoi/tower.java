@@ -8,6 +8,6 @@ import java.util.ArrayList;
 public class Tower
 {
     public Tower(){
-        Tower tower1 = new Tower();
+        
     }
 }
