@@ -5,9 +5,9 @@ import java.util.ArrayList;
  * @author Gary Carlson
  * @version v1
  */
-public class tower
+public class Tower
 {
-    public tower(){
-        
+    public Tower(){
+        Tower tower1 = new Tower();
     }
 }
