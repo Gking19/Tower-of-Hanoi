@@ -8,11 +8,8 @@ import java.util.ArrayList;
 public class Tower
 {
     ArrayList<Disc> tower;
-    private Tower fromTower;
-    private Tower toTower;
-    private Tower tower1;
-    private Tower tower2;
-    private Tower tower3;
+    private int removedSize;
+
     public Tower(){
         tower = new ArrayList<Disc>();
     }
@@ -30,31 +27,34 @@ public class Tower
 
         else if (fromTower.getDisc() > toTower.getDisc()){
             System.out.println("Invalid movement, moving disc is bigger than placed disc.");
+            return false;
         }
 
         else{
-            //fromTower.removeDisk(  );
-            //toTower.addDisk(Disc Disc);
+            fromTower.removeDisc();
+            //toTower.addDisc();
+            return true;
         }
+        //return false;
 
-        return true;
     }
 
     public int getDisc(){
         return tower.get(0).getDiscSize();
     }
 
-    public boolean removeDisk(){
+    public int removeDisc(){
+        removedSize = this.getDisc();
         if(tower.size() > 0){
             tower.remove(0);
-            return true;
+            return removedSize;
         }
-        return false;
+        return removedSize;
     }
 
-    /* public addDisc(Disk disk){
-
+    public boolean addDisc(Disc disc){
+        tower.add(0,disc);
+        return true;
     }
-     */
 
 }
