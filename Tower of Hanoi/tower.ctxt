@@ -1,12 +1,14 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Tower()
-comment1.params=fromTower\ toTower
-comment1.target=boolean\ moveDisc(Tower,\ Tower)
-comment2.params=
-comment2.target=int\ getDisc()
+comment0.params=Size
+comment0.target=Tower(int)
+comment1.params=
+comment1.target=Tower()
+comment2.params=fromTower\ toTower
+comment2.target=boolean\ moveDisc(Tower,\ Tower)
 comment3.params=
-comment3.target=int\ removeDisc()
-comment4.params=disc
-comment4.target=boolean\ addDisc(Disc)
-numComments=5
+comment3.target=int\ getDisc()
+comment4.params=
+comment4.target=int\ removeDisc()
+comment5.params=
+comment5.target=boolean\ addDisc()
+numComments=6

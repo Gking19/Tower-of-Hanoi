@@ -10,8 +10,12 @@ public class Tower
     ArrayList<Disc> tower;
     private int removedSize;
 
+    public Tower(int Size){
+        tower = new ArrayList<Disc>(Size);
+    }
+    
     public Tower(){
-        tower = new ArrayList<Disc>();
+        this(3);
     }
 
     public boolean moveDisc(Tower fromTower, Tower toTower){
@@ -19,27 +23,32 @@ public class Tower
          * Moves disc between fromTower and toTower 
          * @return true if successfully moved disc, false for any other case
          */
-
+        int checkDisk = tower.get(0).getDiscSize();
         if (fromTower == toTower){
             System.out.println("Invalid movement, disc already on tower, choose different tower.");
             return false;
         }
 
-        else if (fromTower.getDisc() > toTower.getDisc()){
+        else if (toTower.getDisc()!=0 || fromTower.getDisc() > toTower.getDisc()){
             System.out.println("Invalid movement, moving disc is bigger than placed disc.");
             return false;
         }
 
         else{
             fromTower.removeDisc();
-            //toTower.addDisc();
+            toTower.addDisc();
             return true;
         }
 
     }
 
     public int getDisc(){
+        if(tower.size() == 0){
+          return 0;   
+        }
+        else{
         return tower.get(0).getDiscSize();
+        }
     }
 
     public int removeDisc(){
@@ -51,7 +60,8 @@ public class Tower
         return removedSize;
     }
 
-    public boolean addDisc(Disc disc){
+    public boolean addDisc(){
+        Disc disc = new Disc();
         tower.add(0,disc);
         return true;
     }
