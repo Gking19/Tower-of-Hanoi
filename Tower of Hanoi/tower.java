@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 /**
- * Write a description of class tower here.
+ * Creates a tower object which holds an ArrayList of discs.
  * 
  * @author Gary Carlson
  * @version v2
@@ -35,7 +35,6 @@ public class Tower
             //toTower.addDisc();
             return true;
         }
-        //return false;
 
     }
 
