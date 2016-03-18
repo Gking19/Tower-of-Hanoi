@@ -13,14 +13,14 @@ public class Tower
     public Tower(int Size){
         tower = new ArrayList<Disc>(Size);
     }
-    
+
     public Tower(){
         this(3);
     }
 
     public boolean moveDisc(Tower fromTower, Tower toTower){
         /**
-         * Moves disc between fromTower and toTower 
+         * Moves disc between fromTower and toTower
          * @return true if successfully moved disc, false for any other case
          */
         int checkDisk = tower.get(0).getDiscSize();
@@ -44,10 +44,10 @@ public class Tower
 
     public int getDisc(){
         if(tower.size() == 0){
-          return 0;   
+            return 0;   
         }
         else{
-        return tower.get(0).getDiscSize();
+            return tower.get(0).getDiscSize();
         }
     }
 
